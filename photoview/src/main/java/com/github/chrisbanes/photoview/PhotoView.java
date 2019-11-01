@@ -138,8 +138,16 @@ public class PhotoView extends AppCompatImageView {
         attacher.setRotationTo(rotationDegree);
     }
 
+    public void setRotationTo(float rotationDegree, float focusX, float focusY) {
+        attacher.setRotationTo(rotationDegree, focusX, focusY);
+    }
+
     public void setRotationBy(float rotationDegree) {
         attacher.setRotationBy(rotationDegree);
+    }
+
+    public void setRotationBy(float rotationDegree, float focusX, float focusY) {
+        attacher.setRotationBy(rotationDegree, focusX, focusY);
     }
 
     public boolean isZoomable() {
@@ -158,7 +166,8 @@ public class PhotoView extends AppCompatImageView {
         attacher.getDisplayMatrix(matrix);
     }
 
-    @SuppressWarnings("UnusedReturnValue") public boolean setDisplayMatrix(Matrix finalRectangle) {
+    @SuppressWarnings("UnusedReturnValue")
+    public boolean setDisplayMatrix(Matrix finalRectangle) {
         return attacher.setDisplayMatrix(finalRectangle);
     }
 
